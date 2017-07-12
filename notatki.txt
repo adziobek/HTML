@@ -53,6 +53,19 @@ zamykającego.
 <input> jest elementem pustym a <textarea> wymaga znacznika zamykającego.
 Inaczej się definiuje wartość domyślną pól.
 
+6.Do czego służy element <button>?
+- do zatwierdzania formularza/wysyłania danych w formularzu do miejsca wskazanego
+przez atrybut action elementu for. Domyślan wartość jego elementu
+type="submit"
+
+7.Do czego służy element <button> o type="button> ?
+- do budowania custom button
+
+8.Czym różni się <input type="submit" od <button type="sumit" ?
+Element <button> może mieć label jako element html natomiast
+input może mieć tylko prosty text value="prosty text"
+
+
 
 
 
