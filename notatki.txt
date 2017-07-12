@@ -65,6 +65,28 @@ type="submit"
 Element <button> może mieć label jako element html natomiast
 input może mieć tylko prosty text value="prosty text"
 
+9.Po co controlkom atrybut id?
+- by identyfikować tą kontrolkę w dokumencie html
+
+10.Po co kontrolkom atrybut name?
+- pod tym atrybutem/nazwą kryje się informacja którą chcemy przesłac na serwer
+"pod nazwą name będzie informacja o imieniu"
+
+11.Jaka jest domyślna metoda wysyłania danych z formularza?
+method="get"
+
+12.Co się stanie gdy nie podamy atrybutu action?
+strona się odświerzy
+
+13.Jak przekazać dane z formularza do funkcji javascriptowej?
+Należy w atrybucie action formularza przekazać nazwę pliku .js który ma się wykonać
+(ale do takiego pliku nie można przekazać formularza)
+lub wywołać funkcję javascriptową:
+action="javascript:handleUserData(user_data);"
+przekazując jej nazwę formularza pod którą kryją się dane z formularza.
+Do tej funkcji jest przekazywany element DOM formularza, z którego
+za pomocą jQuery pobierane są dane formularza.
+
 
 
 
