@@ -1,0 +1,67 @@
+Linki:
+------
+https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#w3c - jak działa przeglądarka, jakie procesy zachodzą
+by z pliku HTML wyświetlić stronę.
+https://www.w3.org/TR/ - W3C standardy
+
+https://www.w3.org/TR/html401/ - HMTL4.01 specification
+https://www.w3.org/TR/html51/  - HTML5.1 specification
+
+https://www.w3.org/TR/html51/sec-forms.html#the-form-element - form HTML 5.1 specification
+https://www.w3.org/TR/html401/interact/forms.html#h-17.3 -     form HTML 4.01 specification
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms - mozilla MDN
+*** https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form - mozilla MDN
+
+https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/DOM3-Core.html - DOM 3 specification
+
+https://validator.w3.org/ - W3C HTML validator
+
+Słowa klucze:
+-------------
+HTML, DOM
+
+
+Przeglądarka internetowa korzysta z specyfikacji HTML oraz CSS do interpretowania i wyświetlania plików stron
+napisanych w HTMLu. Specyfikacje te utrzymuje W3C
+
+
+
+Pytania:
+---------
+1.Dlaczego label i input wiąże się za pomocą atrybutów: for i id? np.
+<label for="name">Name:</label>
+<input type="text" id="name" name="user_name">
+
+-gdy klikniemy na label to aktywuje się kursor w inpucie
+
+2.Za co odpowiada atrybut type w elemencie <input>?
+-decyduje o zachowaniu elementu <input>
+
+3.Jaką wartość domyślą przyjmuje atrybót "type" elementu <input>?
+-domyślnie type="text"
+
+4.Czy element <input> trzeba zamykać?
+-nie, jest to pusty element więc nie potrzebuje znacznika zamykającego(end tag)
+<input type="text" id="name">
+
+Elementy puste - elementy nie mające żadnej zawartości między znacznikiem
+otwierającym i zamykającym, np. <br> <input> więc nie potrzebują znacznika
+zamykającego.
+
+5.Czym się różni <input type="text" od <textarea>
+<input> jest elementem pustym a <textarea> wymaga znacznika zamykającego.
+Inaczej się definiuje wartość domyślną pól.
+
+
+
+
+
+
+
+
+
+
+
+
+
