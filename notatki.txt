@@ -87,6 +87,14 @@ przekazując jej nazwę formularza pod którą kryją się dane z formularza.
 Do tej funkcji jest przekazywany element DOM formularza, z którego
 za pomocą jQuery pobierane są dane formularza.
 
+14.Czy można zagnieżdzać formularze?
+-nie, bo będą działać w nieprzewidywalny sposób
+
+15.Do czego służy fieldset w formularzu?
+- do dzielenia pół formularza na powiązane sekcje, np.
+dane adresowe, dane osobiste.
+Jest przydatny zwłaszcza przy długich formularzach
+oraz można go wykorzystać gdy mamy kilka radio buttonów.
 
 
 
