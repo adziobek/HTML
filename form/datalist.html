@@ -1,0 +1,36 @@
+<form action="">
+    <label for="myFruit">What's your favorite fruit?</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+    <datalist id="mySuggestion">
+        <option>Apple</option>
+        <option>Arbuz</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+    </datalist>
+    <button type="submit">SEND</button>
+</form>
+<br/>
+
+<form action="">
+    <label for="myFruit2">What is your favorite fruit? (With fallback)</label>
+    <input type="text" id="myFruit2" name="fruit" list="fruitList">
+    <datalist id="fruitList">
+        <label for="suggestion">or pick a fruit</label>
+        <select id="suggestion" name="altFruit">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </select>
+    </datalist>
+    <button type="submit">SEND</button>
+</form>
