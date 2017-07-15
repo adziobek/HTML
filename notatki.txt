@@ -113,7 +113,12 @@ https://www.w3.org/TR/html5/infrastructure.html#boolean-attributes - boolean att
 
 17.Do czego służy atrybut disabled?
 -służy do wyłączenia kontrolki na froncie. Użytkownik nie może w nią kliknąć - wprowadzić swoje dane.
-Dane przesyłane z formularza nie będą zawierały danych z tej kontrolki.k
+Dane przesyłane z formularza nie będą zawierały danych z tej kontrolki.
+
+18.Czym różnią się atrybuty boolean: readonly od disabled?
+Dla obu atrybutów nie możemy modyfikować zawartości inputa(domyślnej).
+Gdy atrybut jest disabled to wartość inputa nie jest przesyłana z danymi formularza, a
+gdy readonly jest.
 
 
 
