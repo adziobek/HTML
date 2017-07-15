@@ -17,6 +17,8 @@ https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/DOM3-Core.html - DOM 3 
 
 https://validator.w3.org/ - W3C HTML validator
 
+***https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms - lista elementów HTML z wyjaśnieniem
+
 Słowa klucze:
 -------------
 HTML, DOM
@@ -96,6 +98,18 @@ dane adresowe, dane osobiste.
 Jest przydatny zwłaszcza przy długich formularzach
 oraz można go wykorzystać gdy mamy kilka radio buttonów.
 
+16.Do czego służy atrybut autofocus?
+autofocus - robi focus na daną kontrolkę formularza od razu po załadowaniu strony,
+np. kursor pojawia się od razu w inpucie.
+Jest atrybutem boolean. Jego obecność w elemencie oznacza, że jest ustawiony na true,
+a brak w elemencie że jest ustawiony na false. Nie musimy ustawiać jego wartości.
+Można ustawić jego wartość na pusty string lub jego nazwę kanoniczną. Nie można ustawiać
+na wartość true lub false,np. autofocus="true"
+Zapisy:
+autofocus=autofocus oraz autofocus="autofocus" są równoznaczne !!!!
+
+https://www.w3.org/TR/html5/forms.html#autofocusing-a-form-control:-the-autofocus-attribute - działanie autofocus
+https://www.w3.org/TR/html5/infrastructure.html#boolean-attributes - boolean attributes
 
 
 
