@@ -143,6 +143,9 @@ prostego tekstu.
 22.Błędna walidacja jakich pól uniemożliwia przesłanie formularza?
 type= email lub url
 
+23.Czym różni się textarea element od inputa?
+<textarea>  jest regular elementem (nie empty elementem). Może mieć child elementy, np.
+child element textowy. Można zmieniać jego rozmiar i wprowadzać wiele linii tekstu.
 
 
 
