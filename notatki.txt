@@ -173,6 +173,30 @@ Gdy dla kilku radio buttonów ustawimy taką samą wartość atrybutu name to
 stworzą one grupę. Wartość tylko jednego radio buttona (zaznaczonego) zostanie wysłana
 na akcję wysyłającą formularz.
 
+29.Czy IE wspiera <input type=number"
+
+IE10, IE11 nie wspiera w pełni <input type="number" .
+Brak jest przycisku zwiększającego/zmiejszającego wartość pola.
+
+30.Za pomocą jakich elementów użytkownik może wprowadzić liczby?
+<input type="number" oraz
+<input type="range" (slider)
+W obu przydkach korzystamy z atrybutów min, max, step
+
+31.Kiedy stosować slider?
+Slider stosować kiedy nie zależy nam na dokładności. Aby wyświetlic aktualną wartość
+należy dorobić javascript, który będzie ją wyświetlał.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
