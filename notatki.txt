@@ -120,6 +120,14 @@ Dla obu atrybutów nie możemy modyfikować zawartości inputa(domyślnej).
 Gdy atrybut jest disabled to wartość inputa nie jest przesyłana z danymi formularza, a
 gdy readonly jest.
 
+19.Doc zego służą atrybuty size i maxlength dla elementu <input type="text" lub <input type="password"?
+
+size -liczba widzialnych znakow w inpucie, mówi ile przeglądarka powinna pokazać znaków w inpucie
+(jak długie pole stworzyć).Domyślny size = 20 znaków.
+Zadziała tylko gdy będą wyłączone CSS customowe i przeglądarki(literek o różnym rozmiarze i tak
+zmieści się inna ilość)
+
+maxlength - ile użytkownik może maksymalnie wprowadzić znaków do inputa
 
 
 
