@@ -129,6 +129,22 @@ zmieści się inna ilość)
 
 maxlength - ile użytkownik może maksymalnie wprowadzić znaków do inputa
 
+20.Jakiego typy mogą być elementy <input
+
+-text, password, url, tel, email, search
+
+Dla email, tel najczęściej przeglądarki odpalają swoje walidacje i sygnalizują błąd walidacji, np.
+zakreślając okienko na czerwono lub podkreślając text na czerwono.
+
+21.Co się dzieje gdy wysyłamy hasło z <input type="password" zwykłym http?
+Gdy wysyłamy dane z formularza zwykłym http to dane te są przesyłane w postaci
+prostego tekstu.
+
+22.Błędna walidacja jakich pól uniemożliwia przesłanie formularza?
+type= email lub url
+
+
+
 
 
 
