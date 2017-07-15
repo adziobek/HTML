@@ -20,6 +20,7 @@ https://validator.w3.org/ - W3C HTML validator
 ***https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms - lista elementów HTML z wyjaśnieniem
 
 http://caniuse.com/#feat=input-datetime - by sprawdzić co w jakiej przeglądarce jest wspierane
+https://www.wufoo.com/html5/ - by sprawdzić wspieranie poczszczególnych kontrolek
 
 Słowa klucze:
 -------------
