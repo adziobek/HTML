@@ -19,6 +19,8 @@ https://validator.w3.org/ - W3C HTML validator
 
 ***https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms - lista elementów HTML z wyjaśnieniem
 
+http://caniuse.com/#feat=input-datetime - by sprawdzić co w jakiej przeglądarce jest wspierane
+
 Słowa klucze:
 -------------
 HTML, DOM
@@ -187,6 +189,15 @@ W obu przydkach korzystamy z atrybutów min, max, step
 Slider stosować kiedy nie zależy nam na dokładności. Aby wyświetlic aktualną wartość
 należy dorobić javascript, który będzie ją wyświetlał.
 
+32.Jakie przeglądarki wspierają <input type="date"  i co z resztą?
+Datepicker wspiera jedynie Chrome. W pozostałych przeglądarkach trzeba używać Javascriptu
+by korzystać z kalendarza.
+Dane przesyłane z formularza:
+date:2017-07-01
+datetime:2017-07-01T01:01
+month:2017-07
+time:01:01
+week:2017-W26
 
 
 
