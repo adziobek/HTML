@@ -152,6 +152,26 @@ W pierszej kolejności wysyłamy wartość na jaką jest ustawiony atrybut value
 elementu <option>. Jeśli w tym elemencie nie będzie atrybutu value, wysłana zostanie zawartość elementu option.
 <option value="wysłana w pierszej kolejności">Wysłana w drugiej kolejności</option>
 
+25.Czym różnią się elementy <input type="checkbox lub type="radio" od pozostałych?
+Ich wartość jest wysyłana jeśli mają atrybut name oraz przyjmują wartość true - są zaznaczone (checked).
+
+26.Co się stanie element nie będzie miał ustawionego atrybutu name?
+Nie zostanie wysłany wraz z danymi z formularza.
+
+27.Jaka wartość jest przesyłana z formularza z elementów <input type=text, password, email
+a jaka z elementów type="radio" i type="checkbox" ?
+
+Dla elementów tekstowych jest przesyłana wartość domyślna z atrybutu value lub
+wartość wprowadzona przez użytkownika.
+Dla elementów boolean jest przesyłana wartość z atrybutu value lub wartość 'on' gdy
+atrybut value nie zostanie ustawiony.
+np. <input type="checkox" name="apple" value="apple" - zostanie wysłany
+apple: apple
+
+28.Jak z radio buttonów stworzyć grupę?
+Gdy dla kilku radio buttonów ustawimy taką samą wartość atrybutu name to
+stworzą one grupę. Wartość tylko jednego radio buttona (zaznaczonego) zostanie wysłana
+na akcję wysyłającą formularz.
 
 
 
