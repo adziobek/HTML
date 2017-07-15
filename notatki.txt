@@ -147,6 +147,11 @@ type= email lub url
 <textarea>  jest regular elementem (nie empty elementem). Może mieć child elementy, np.
 child element textowy. Można zmieniać jego rozmiar i wprowadzać wiele linii tekstu.
 
+24.Jakie pole wysyłamy z elementu select?
+W pierszej kolejności wysyłamy wartość na jaką jest ustawiony atrybut value wybranego przez użytkownika
+elementu <option>. Jeśli w tym elemencie nie będzie atrybutu value, wysłana zostanie zawartość elementu option.
+<option value="wysłana w pierszej kolejności">Wysłana w drugiej kolejności</option>
+
 
 
 
