@@ -111,8 +111,9 @@ autofocus=autofocus oraz autofocus="autofocus" są równoznaczne !!!!
 https://www.w3.org/TR/html5/forms.html#autofocusing-a-form-control:-the-autofocus-attribute - działanie autofocus
 https://www.w3.org/TR/html5/infrastructure.html#boolean-attributes - boolean attributes
 
-
-
+17.Do czego służy atrybut disabled?
+-służy do wyłączenia kontrolki na froncie. Użytkownik nie może w nią kliknąć - wprowadzić swoje dane.
+Dane przesyłane z formularza nie będą zawierały danych z tej kontrolki.k
 
 
 
