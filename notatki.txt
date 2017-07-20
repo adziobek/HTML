@@ -19,6 +19,8 @@ https://validator.w3.org/ - W3C HTML validator
 
 ***https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms - lista elementów HTML z wyjaśnieniem
 
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps - odbieranie danych z formularzy po stronie serwera
+
 http://caniuse.com/#feat=input-datetime - by sprawdzić co w jakiej przeglądarce jest wspierane
 https://www.wufoo.com/html5/ - by sprawdzić wspieranie poczszczególnych kontrolek
 
@@ -66,11 +68,11 @@ type="submit"
 7.Do czego służy element <button> o type="button> ?
 - do budowania custom button
 
-8.Czym różni się <input type="submit" od <button type="sumit" ?
+8.Czym różni się <input type="submit" od <button type="submit" ?
 Element <button> może mieć label jako element html natomiast
 input może mieć tylko prosty text value="prosty text"
 
-9.Po co controlkom atrybut id?
+9.Po co kontrolkom atrybut id?
 - by identyfikować tą kontrolkę w dokumencie html
 
 10.Po co kontrolkom atrybut name?
@@ -80,8 +82,8 @@ input może mieć tylko prosty text value="prosty text"
 11.Jaka jest domyślna metoda wysyłania danych z formularza?
 method="get"
 
-12.Co się stanie gdy nie podamy atrybutu action?
-strona się odświerzy
+12.Co się stanie gdy nie podamy atrybutu action w elemencie <form>?
+Dane z formularza zostaną wysłanę na URL strony, która zawiera formularz.(strona się też odświerzy)
 
 13.Jak przekazać dane z formularza do funkcji javascriptowej?
 Należy w atrybucie action formularza przekazać nazwę pliku .js który ma się wykonać
@@ -123,7 +125,7 @@ Dla obu atrybutów nie możemy modyfikować zawartości inputa(domyślnej).
 Gdy atrybut jest disabled to wartość inputa nie jest przesyłana z danymi formularza, a
 gdy readonly jest.
 
-19.Doc zego służą atrybuty size i maxlength dla elementu <input type="text" lub <input type="password"?
+19.Do czego służą atrybuty size i maxlength dla elementu <input type="text" lub <input type="password"?
 
 size -liczba widzialnych znakow w inpucie, mówi ile przeglądarka powinna pokazać znaków w inpucie
 (jak długie pole stworzyć).Domyślny size = 20 znaków.
@@ -200,10 +202,24 @@ month:2017-07
 time:01:01
 week:2017-W26
 
+//Sending and retrieving form data
+33.Jakie adresy można podać w atrybucie action elementu <form>?
+Można podać(adres bezwzględny i względny):
+-absolute URL - <form action="http://foo.com"> - dane wysyłane są na serwer podany w URL
+-relative URL - <form action="/somewhere_else"> - dane wysyłane są na ten sam serwer pod inny URL
+
+34.W jakich wersjach HTML konieczne było podawanie atrybutu action
+wskazującego, że dane z formularza powinny trafić na stronę, na której znajduje się formularz?
+<form action="#"> - zapis taki powinien się znaleźć na stronie w wersji HTML do HTML5.
+HTML5 nie wymaga już podawania atrybutu action.
 
 
 
 
+-jak przeglądarka zasysa specyfikacje HMTL, CSS, DOM z W3C
+ (napisać do autorki filmiku o działaniu przeglądarek)
+-jak działa domyślna validacja w przeglądarkach
+-jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
 
 
 
