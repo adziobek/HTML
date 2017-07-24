@@ -213,6 +213,16 @@ wskazującego, że dane z formularza powinny trafić na stronę, na której znaj
 <form action="#"> - zapis taki powinien się znaleźć na stronie w wersji HTML do HTML5.
 HTML5 nie wymaga już podawania atrybutu action.
 
+35.W jaki sposób mogą być przesyłane dane z formularza?
+-jeśli w action podamy link z HTTPS a cała strona będzie serwowana za pomocą HTTP to
+dane zostaną zaszyfrowane i wysłane
+-jeśli strona będzie serwowana za pomocą HTTPS a formularz za pomocą HTTP to przeglądarka
+wyświetlni wyjątek bezpieczeństwa
+
+
+
+
+
 
 
 
