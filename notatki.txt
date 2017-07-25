@@ -286,6 +286,11 @@ https://stackoverflow.com/questions/20516803/is-it-possible-to-use-html5-element
 46.Co to znaczy sanitizing data?
 Jest to usuwanie złośliwych informacji z danych podanych przez użytkownika w formularzu.
 
+47.Jaki typ inputu nie wymaga podania atrybutu pattern z wartością by
+walidacja działała domyślnie?
+Jest to <input type="email" lub type="url"
+
+
 
 
 
