@@ -24,6 +24,10 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps - odbiera
 http://caniuse.com/#feat=input-datetime - by sprawdzić co w jakiej przeglądarce jest wspierane
 https://www.wufoo.com/html5/ - by sprawdzić wspieranie poczszczególnych kontrolek
 
+https://codepen.io/morganpolotan/pen/bvqph - form validation
+
+***https://www.w3.org/TR/html5-diff/ - HTML 4 VS 5 diff
+http://caniuse.com/#feat=form-validation - przeglądarki wspierające walidacje HTML 5(za pomoca atrybutów required, attern, min, max) bez JS
 Słowa klucze:
 -------------
 HTML, DOM
@@ -213,7 +217,19 @@ wskazującego, że dane z formularza powinny trafić na stronę, na której znaj
 <form action="#"> - zapis taki powinien się znaleźć na stronie w wersji HTML do HTML5.
 HTML5 nie wymaga już podawania atrybutu action.
 
+35.W jaki sposób można walidować formularze?
+-po stronie klienta(w przeglądarce klienta) za pomocą JavaScriptu. W HTML5 można walidować formularze bez użycia JS.
+-po stronie serwera
 
+37.Co się dzieje w przypadku elementów przechodzących/nieprzechodzących walidacji?
+Elementy nie przechodzące walidacji dostają pseudo klase :invalid a przechodzące klasę :valid.
+Dzięki temu można zastosować do nich odpowiednie style.
+Przeglądarka blokuje forularz przed wysłaniem jeśli posiada elementy invalid.
+
+38.Walidacja formularza HTML4 a HTML5?
+W HTML4 walidację można było zrobić jedynie w JS.
+HTML5 dodaje atrybuty dzięki którym nie trzeba pisać walidacji w JS:
+required, min, max, pattern, maxlength
 
 
 
@@ -223,7 +239,8 @@ HTML5 nie wymaga już podawania atrybutu action.
 4.Kiedy przeglądarki zaczną wspierać HMTL 5
 5.Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacja przeglądarki
 6.Jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
-
+7.Jak przeglądarka blokuje wysłanie formularza gdy jego element jest invalid
+8.Jak przeglądarka rozróżnia stronę w HTML4 od HTML5?
 
 
 
