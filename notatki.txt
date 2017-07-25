@@ -216,12 +216,13 @@ HTML5 nie wymaga już podawania atrybutu action.
 
 
 
--jak przeglądarka zasysa specyfikacje HMTL, CSS, DOM z W3C
- (napisać do autorki filmiku o działaniu przeglądarek)
--jak działa domyślna validacja w przeglądarkach
--jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
 
-
+1.Jaka przeglądarka jaką wersję HTML wspiera
+2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C
+3.Jak wylistować atrybuty elemtu HTML
+4.Kiedy przeglądarki zaczną wspierać HMTL 5
+5.Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacja przeglądarki
+6.Jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
 
 
 
