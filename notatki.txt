@@ -217,19 +217,68 @@ wskazującego, że dane z formularza powinny trafić na stronę, na której znaj
 <form action="#"> - zapis taki powinien się znaleźć na stronie w wersji HTML do HTML5.
 HTML5 nie wymaga już podawania atrybutu action.
 
-35.W jaki sposób można walidować formularze?
+35.W jaki sposób mogą być przesyłane dane z formularza?
+-jeśli w action podamy link z HTTPS a cała strona będzie serwowana za pomocą HTTP to
+dane zostaną zaszyfrowane i wysłane
+-jeśli strona będzie serwowana za pomocą HTTPS a formularz za pomocą HTTP to przeglądarka
+wyświetlni wyjątek bezpieczeństwa
+
+36.Czym się różni metoda POST od GET przy wysyłaniu formularza?
+W metodzie GET dane wysyłane są w URL(headerze żądania) a w POST w body żądania.
+
+37.Kiedy używać metody POST do wysyłania danych formularza?
+Wtedy gdy chcemy przesyłać dane wrażliwe(np. hasła i nie chcemy ich w URLu pokazywać)
+oraz gdy przesyłamy dużą ilość informacji, które nie zmieściły by się w URLu.
+
+38.W jakiej postaci dane z formularza trafiają do serwera?
+Trafiają w postaci stringa składającego się z par klucz=wartość
+
+39.Jakie są frameworki do pisania części serwerowej, odbierającej requesty?
+-Java
+-Grails for Java
+-Symfony for PHP
+-Django for Python
+-Express for Node.js
+
+40.Czy za pomocą protokołu HTTP można przesyłać pliki?
+HTTP jest protokołem tekstowym. Aby przesyłać pliki w postaci binarnej należy spełnić
+3 wymagania:
+1 - ustawić metodę na POST, bo pliki nie mogą być wysyłane w formularzu
+2 - ustawić wartość atrybutu enctype elementu <form> na multipart/form-data
+bo dane mogą być przesyłane w kilku paczkach.
+Domyślnie dla metody GET enctype jest ustawiany na x-www-form-urlencoded.
+Atrybut enctype ustawia Content-Type w headerze requestu który jest tworzony po
+akcji zatwierdzenia formularza.
+3 - stworzyć odpowiednią kontrolkę/file picker do wskazania plików do wysłania z formularzu
+
+41.Jakie są ataki na dane przesyłane za pomocą formularzy?
+XSS - Cross-Site Scripting, haker wstrzykuje kod do strony, którą przegląda atakowany
+      w ten sposób może np. wykorzystać politykę same origin policy
+
+CSRF - Cross-Site Request Forgery - haker wstrzykuje kod do strony osoby atakowanej,
+       chce zwiększyć swoje możliwości na stronie, akcje które może wykonać
+
+
+42.W jaki sposób można walidować formularze?
 -po stronie klienta(w przeglądarce klienta) za pomocą JavaScriptu. W HTML5 można walidować formularze bez użycia JS.
 -po stronie serwera
 
-37.Co się dzieje w przypadku elementów przechodzących/nieprzechodzących walidacji?
+43.Co się dzieje w przypadku elementów przechodzących/nieprzechodzących walidacji?
 Elementy nie przechodzące walidacji dostają pseudo klase :invalid a przechodzące klasę :valid.
 Dzięki temu można zastosować do nich odpowiednie style.
 Przeglądarka blokuje forularz przed wysłaniem jeśli posiada elementy invalid.
 
-38.Walidacja formularza HTML4 a HTML5?
+44.Walidacja formularza HTML4 a HTML5?
 W HTML4 walidację można było zrobić jedynie w JS.
 HTML5 dodaje atrybuty dzięki którym nie trzeba pisać walidacji w JS:
 required, min, max, pattern, maxlength
+
+
+
+
+
+
+
 
 
 
@@ -237,16 +286,9 @@ required, min, max, pattern, maxlength
 2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C
 3.Jak wylistować atrybuty elemtu HTML
 4.Kiedy przeglądarki zaczną wspierać HMTL 5
-5.Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacja przeglądarki
+5.Jak działa domyślna walidacja w przeglądarkach/
+Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacja przeglądarki
 6.Jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
 7.Jak przeglądarka blokuje wysłanie formularza gdy jego element jest invalid
 8.Jak przeglądarka rozróżnia stronę w HTML4 od HTML5?
-
-
-
-
-
-
-
-
-
+9.Czy da radę wysłać formularz za pomocą innych metod HTTP, np. OPTION
