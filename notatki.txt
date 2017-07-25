@@ -273,11 +273,18 @@ W HTML4 walidację można było zrobić jedynie w JS.
 HTML5 dodaje atrybuty dzięki którym nie trzeba pisać walidacji w JS:
 required, min, max, pattern, maxlength
 
+45.Czy przeglądarka rozróżnia dokumenty napisane w HTML4 od HTML5?
+Przeglądarka dostaje dokument i nie sprawdza w jakiej wersji HTML został on napisany.
+Parsuje go i wyświetla rezultat. Przeglądarki są tolerancyjne na błędy
+w htmlu(użycie nieznanych atrybutów czy elementów powoduje ich zlekceważenie).
+Jeśli przeglądarka wspiera HTML5 to go sparsuje i wyświetli pomyślnie.
+Doctype mówi przeglądarce w jakim modzie ma działać: quirks czy standard.
 
+https://stackoverflow.com/questions/45307154/how-google-chrome-recognize-html-version/45308947#45308947
+https://stackoverflow.com/questions/20516803/is-it-possible-to-use-html5-elements-with-old-html4
 
-
-
-
+46.Co to znaczy sanitizing data?
+Jest to usuwanie złośliwych informacji z danych podanych przez użytkownika w formularzu.
 
 
 
@@ -292,3 +299,6 @@ Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacj
 7.Jak przeglądarka blokuje wysłanie formularza gdy jego element jest invalid
 8.Jak przeglądarka rozróżnia stronę w HTML4 od HTML5?
 9.Czy da radę wysłać formularz za pomocą innych metod HTTP, np. OPTION
+10.Co robi przeglądarka z nieznanymi atrybutami/tagami?
+11.Do czego służy Modernizr?
+12.Do czego jest używany DOCTYPE - do mode quiks lub standard
