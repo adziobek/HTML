@@ -290,6 +290,8 @@ Jest to usuwanie złośliwych informacji z danych podanych przez użytkownika w 
 walidacja działała domyślnie?
 Jest to <input type="email" lub type="url"
 
+48.Jakie walidacje wprowadza HTML5?
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation
 
 
 
