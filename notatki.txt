@@ -318,7 +318,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
 za pomocą polyfill such as Hyperform:
 https://hyperform.js.org/
 
-
+54.Co powoduje dodanie atrybutu novalidate do formularza?
+Novalidate powoduje, że domyślna walidacja i komunikaty walidacyjne z htmla
+zostają wyłączone.
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
 2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C
