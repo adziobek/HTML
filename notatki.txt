@@ -293,6 +293,30 @@ Jest to <input type="email" lub type="url"
 48.Jakie walidacje wprowadza HTML5?
 https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation
 
+49.Jak działają error messages dla walidacji w HTML5?
+Wiadomości mówiące o błędzie walidacji(required,pattern):
+- nie można zmienić ich wyglądu za pomocą CSS
+- język, w którym się pokazują zależy od locale przeglądarki
+- aby zmienić ich tekst i wygląd trzeba użyć JavaScript
+
+50.W jaki sposób można wyłączyć walidację z HTML5?
+Na formularzu ustawiamy boolean atrybut novalidate, co znaczy że gdy klikniemy
+submit button, formularz nie będzie walidowany i dane z formularza zostaną
+wysłane bez walidacji.
+
+51.W jaki sposób można zmienić zachowanie error message, jego treść?
+HTML5 udostępnia constraint validation API do customowego sprawdzania validacji elementów.
+Za pomocą https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api
+i JavaScriptu można sprawdzać walidację pól, dostosowywać error message.
+
+52.Jak w HTML5 wylistować wszystkie możliwe walidacje na elemencie, np.input?
+element.validity
+Interfejs ValidityState oraz lista przeglądarek go wspierająca:
+https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
+
+53.Jak skorzystać z constraint validation API w starszych przeglądarkach?
+za pomocą polyfill such as Hyperform:
+https://hyperform.js.org/
 
 
 
@@ -309,3 +333,5 @@ Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacj
 10.Co robi przeglądarka z nieznanymi atrybutami/tagami?
 11.Do czego służy Modernizr?
 12.Do czego jest używany DOCTYPE - do mode quiks lub standard
+13.Dlaczego aby zmienić wygląd wyskakujących elementów, np. error message dla inputu czy
+tooltipów musimy używać JavaScriptu?

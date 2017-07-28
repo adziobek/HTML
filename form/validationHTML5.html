@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<style>
-    input:invalid {
-        border: 2px dashed red;
-    }
+<html>
+<head>
+    <style>
+        input:invalid {
+            border: 2px dashed red;
+        }
 
-    input:valid {
-        border: 2px solid black;
-    }
-</style>
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+    <script src="validate.js"></script>
+</head>
+<body>
+</body>
 <form>
     <label for="choose">Would you prefer a banana or cherry?</label>
     <input id="choose"
-           name="i_like"
+           name="i_like1"
            required
            pattern="banana|cherry"
            maxlength="8"><br/>
-    <label for="n1">How many fruits You ate?</label>
-    <input type="number" id="n1" name="fruit_number" min="0" max="10" step="1"><br/>
+    <label for="choose2">Would you prefer a apple or orange</label>
+    <input type="text"
+           id="choose2"
+           name="i_like2"
+           pattern="apple|orange"
+           maxlength="8"
+           required><br/>
     <button>Submit</button>
 </form>
+</html>
