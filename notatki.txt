@@ -371,6 +371,14 @@ Content-Type może mieć wartość:
 -application/x-www-form-urlencoded - dla pozostałych danych
 https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
 
+63.Dlaczego na konsoli dane nie są w czytelnej postaci do odczytu gdy
+wykorzystujemy FormData?
+Dlatego że FormData ustawia Content-Type na multipart/form-data,
+tak jakbyśmy zawsze przesyłali dane binarne.
+https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+
+
+
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
 2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C

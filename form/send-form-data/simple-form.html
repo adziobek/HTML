@@ -26,6 +26,11 @@
     <button type="button" onclick="sendData(userData)">SEND</button>
 </form>
 <hr/>
+<form id="testForm">
+    <label for="test">test:</label>
+    <input type="text" id="test" name="test" value="test"/><br/>
+    <button type="button" onclick="sendDataFromRawForm()">SEND</button>
+</form>
 <hr/>
 <form name="jsonData">
     <button type="button" onclick="sendData({name:'Andrzej', lastName:'Lewandowski'})">SEND JSON{name:'Andrzej',
