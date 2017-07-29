@@ -320,7 +320,21 @@ https://hyperform.js.org/
 
 54.Co powoduje dodanie atrybutu novalidate do formularza?
 Novalidate powoduje, że domyślna walidacja i komunikaty walidacyjne z htmla
-zostają wyłączone.
+zostają wyłączone. Nie zostanie uruchomiona walidacja przed wysłaniem formularza.
+
+Działać natomiast nadal będzie constraint validation API(atrybuty required, pattern, min, max)
+oraz pseudo klasy :valid :invalid - więc stylowanie błędów nadal będzie działać, ale komunikaty
+error message przestaną się pokazywać.
+
+"This simple form uses the novalidate attribute to turn off the browser's automatic validation;
+ this lets our script take control over validation. However, this doesn't disable support for
+ the constraint validation API nor the application of the CSS pseudo-class :valid, :invalid,
+ :in-range and :out-of-range classes. That means that even though the browser doesn't automatically
+ check the validity of the form before sending its data, you can still do it yourself and style the form accordingly."
+
+
+
+
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
 2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C

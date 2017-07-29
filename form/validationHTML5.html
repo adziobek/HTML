@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        input:invalid {
-            border: 2px dashed red;
-        }
+    <!--    <style>
+            input:invalid {
+                border: 2px dashed red;
+            }
 
-        input:valid {
-            border: 2px solid black;
-        }
-    </style>
+            input:valid {
+                border: 2px solid black;
+            }
+        </style>-->
+    <link rel="stylesheet" href="validationHTML5.css"/>
     <script src="validate.js"></script>
 </head>
 <body>
@@ -28,6 +29,17 @@
            pattern="apple|orange"
            maxlength="8"
            required><br/>
+    <button>Submit</button>
+</form>
+<hr/>
+<form id="emailForm" novalidate>
+    <p>
+        <label for="email">
+            Please enter an email address:</span>
+            <input type="email" id="email" name="email" required>
+            <span class="error" aria-live="polite"></span>
+        </label>
+    </p>
     <button>Submit</button>
 </form>
 </html>
