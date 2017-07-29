@@ -7,6 +7,7 @@ function sendData(data) {
     var jsonConstructor = {}.constructor;
     var urlEncodedDataPairs = [];
     var urlEncodedData = "";
+    var formData = new FormData();
 
     if (data instanceof HTMLFormElement) {
         console.log("html element come");
@@ -15,13 +16,15 @@ function sendData(data) {
         var data = $('form').serializeArray();
         for (var i = 0; i < data.length; i++) {
             console.log(data[i]);
-            urlEncodedDataPairs.push(encodeURIComponent(data[i]['name']) + '=' + encodeURIComponent(data[i]['value']))
+            //urlEncodedDataPairs.push(encodeURIComponent(data[i]['name']) + '=' + encodeURIComponent(data[i]['value']))
+            formData.append(data[i]['name'],data[i]['value']);
         }
     }
     if (data.constructor === jsonConstructor) {
         console.log("json come");
         for (name in data) {
-            urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]))
+           // urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]))
+            formData.append(name, data[name]);
         }
     }
 
@@ -36,6 +39,7 @@ function sendData(data) {
     });
 
     request.open('POST', 'http:/costam');
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    request.send(urlEncodedData);
+    //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    //request.send(urlEncodedData);
+    request.send(formData);
 }
