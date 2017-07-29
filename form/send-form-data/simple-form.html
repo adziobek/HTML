@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="send.js"></script>
+    <script src="../jquery-3.2.1.js"></script>
+</head>
+<body>
+<!--<form>
+    <label for="cos1">Name:</label>
+    <input type="text" id="cos1" name="cos1"/><br/>
+    <button type="submit">SEND and use GET</button>
+</form>
+<hr/>
+<form method="POST">
+    <label for="cos2">Name:</label>
+    <input type="text" id="cos2" name="cos2"/><br/>
+    <button type="submit">SEND and use POST</button>
+</form>-->
+<form name="userData">
+    <label for="firstName">Name:</label>
+    <input type="text" id="firstName" name="firstName"/><br/>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"/><br/>
+    <button type="button" onclick="sendData(userData)">SEND</button>
+</form>
+<hr/>
+<hr/>
+<form name="jsonData">
+    <button type="button" onclick="sendData({name:'Andrzej', lastName:'Lewandowski'})">SEND JSON{name:'Andrzej',
+        lastName:'Lewandowski'}</button>
+</form>
+</body>
+</html>

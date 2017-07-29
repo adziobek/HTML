@@ -335,7 +335,41 @@ error message przestaną się pokazywać.
 55.Kiedy nie można skorzystac z constraint violation API?
 Wtedy gdy mamy doczynienia z customowymi kontrolkami bądź legacy browser(strzymi przeglądarkami).
 
+56.Jak można wysłać dane formularza?
+Za pomoca standardowego formularza - HTTP request budowany jest wtedy i wysyłany przez przeglądarkę.
+Możemy też sami wysłać formularza za pomocą AJAXa i XMLHttpRequest.
 
+57.Do czego służy XMLHttpRequest?
+Jest to objekt AJAXa, może służyć do wysłania danych formularza.
+https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+
+58.Dlaczego musimy kodować URLe?
+Dlatego że adres URL powienien składać się z liter, cyfr oraz określonych znaków specjalnych.
+Każde inne znaki powinny zostać zakodowane by przeglądarki sobie z nimi poradziły.
+https://www.thoughtco.com/encoding-urls-3467463
+
+59.Kiedy użyć metody encodeURI a kiedy encodeURIComponent?
+Metody encode URI używamy do kompletnego adresu URI, a encodeURIComponent
+gdy chcemy zakodować parametr URLa.
+
+60.Jakim znakiem zastąpić spację przy wysyłaniu danych z formularza w urlu?
+Dla Content-Type=application/x-www-form-urlencoded,  spacja powinna zostać zastąpiona znakiem (+).
+Po encodeURIComponent musimy %20 zastąpić +
+
+61.Kiedy ustawiany jest header Content-Type i do czego służy?
+Content-Type mówi w jakim formacie wysyłane są dane z formularza.
+Jest ustawiany gdy dane są wysyłane za pomocą metody POST w ciele(BODY)
+requestu, a nie jak to jest w przypadku GET(w headerze w URLu).
+Powinien być ustawiany gdy przesyłamy dane w body requesta(przeznaczony dla
+metod POST lub PUT). Jest bezużyteczny z metodą GET bo request tej metody nie ma body.
+Dla formularzy jest ustawiany na: application/x-www-form-urlencoded
+
+62.Jaką wartość przyjmuje Content-Type dla danych z formularza?
+Content-Type może mieć wartość:
+-multipart/form-data - dla danych binarnych
+-application/x-www-form-urlencoded - dla pozostałych danych
+https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
 
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
