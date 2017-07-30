@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        // run this function when the document is loaded
+        console.log("Parser start create DOM");
+    </script>
+    <script src="external.js"></script>
+    <script>
         window.onload = function () {
-
-            // create a couple of elements in an otherwise empty HTML page
-            var heading = document.createElement("h1");
-            var heading_text = document.createTextNode("Big Head!");
-            heading.appendChild(heading_text);
-            document.body.appendChild(heading);
+            changeptext("window.onload after DOM was created");
+        };
+        changeptext("while DOM is created and html is parsed");
+        function changeptext(newtext) {
+            var ptext = document.getElementById("ptext");
+            ptext.innerHTML = newtext;
         }
     </script>
 </head>
 <body>
-
+<script>
+    console.log("Parser starts parsing body");
+</script>
+<p1>This is from html body</p1>
+<br>
+<p1 id="ptext">This is from html body</p1>
 </body>
 </html>

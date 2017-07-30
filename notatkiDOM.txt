@@ -29,10 +29,39 @@ jej zawartość, tj. skrypty, css, orazki
 document.onload - jest wywoływany gdy kiedy powstanie DOM, ale nie zostanie załadowana
 całość zawartości strony
 
+5.Jak jest parsowana strona html, kiedy jest tworzony DOM, kiedy są odpalane pliki
+js pobierane lub będące inline w elemencie head htmla?
+
+Na początku przeglądarka pobiera dokument .html z sieci.
+Następnie, zaczyna parsować ten dokument i tworzyć drzewo DOM ze sparsowanych elementów.
+Następnie, gdy przeglądarka natknie się na odnośnik do zewnętrzengo skryptu, np.
+
+<html>
+<head>
+    <sctipt src="http:/dobryskrypt.js...></sctipt>
+    ...
+przeglądarka pobiera ten skrypt i wstrzymuje parsowanie dalszej części htmla.
+Po pobraniu skryptu, uruchamia go.
+Gdy skrypt zostanie wykonany przeglądarka wznawia parsowanie dalszej części htmla.
+https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup?answertab=votes#tab-top
+
+6.Dlaczego przeglądarka czeka na pobranie i wykonanie skryptu js?
+Dlatego, że może w nim być kod zmieniający strukture htmla, dodający nowy element, np.
+document.write("<p>nowy akapit</p>")
+
+7.Dlaczego przy próbie pobrania elementu w skrypcie i zmiany jego tekstu dostajemy błąd:
+Uncaught TypeError: Cannot set property 'innerHTML' of null
+dla skryptu:
+var ptext = document.getElementById("ptext");
+            ptext.innerHTML = newtext;
+?
+Dlatego, że parser zatrzymał się na skrypcie, nie doszedł jeszcze do tego elementu w htmlu
+i nie dodał do do drzewa DOM by móc po niego sięgać :)
+
+
 
 
 
 PYTANIA:
-1.Dlaczego skrypty znajdujące się inline w <head> w <script> są odpalane przez załadowaniem DOM
-w etapie parsowania i nie można się w nich do elementów DOMu odnosić i trzeba czekać na zdarzenie
-załadowania domu window.onload(){ treść skryptu}
+1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
+Jak pobierają css oraz image(równolegle)?
