@@ -1,0 +1,38 @@
+Linki:
+------
+***https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_browser_main_functionality
+http://taligarsiel.com/Projects/howbrowserswork1.htm#Parsing_general - świetnie opisane jak parser działa i jak DOM powstaje
+
+Pytania:
+---------
+1.Co to jest DOM?
+DOM - Document Object Model, api dla języków programowania(głównie JavaScriptu) by mogły
+komunikować się ze stroną w HTMLu, modyfikować jej zawartość, style.
+Przeglądarki implementują standardy zamieszczone na stronach:
+https://dom.spec.whatwg.org/
+oraz
+https://www.w3.org/DOM/
+
+2.Czym w DOM jest strona HTML?
+Jest to document, zarówno w HTMLu jak i wyświetlany w przeglądarce.
+
+3.Czy DOM jest językiem programowania?
+Nie, nie jest. Ale bez niego JS nie miałby pojęcia o HTMLu, XMLu
+Zawartość strony jest przechowywana w DOM.
+
+4.Czym różnią się metody window.onload vs. document.onload?
+window.onload - jest wywoływany gdy DOM powstanie, zostanie załadowana cała strona oraz
+jej zawartość, tj. skrypty, css, orazki
+
+document.onload - jest wywoływany gdy kiedy powstanie DOM, ale nie zostanie załadowana
+całość zawartości strony
+
+
+
+
+PYTANIA:
+1.Dlaczego skrypty znajdujące się inline w <head> w <script> są odpalane przez załadowaniem DOM
+w etapie parsowania i nie można się w nich do elementów DOMu odnosić i trzeba czekać na zdarzenie
+załadowania domu window.onload(){ treść skryptu}
