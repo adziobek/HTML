@@ -106,7 +106,19 @@ https://stackoverflow.com/questions/10808109/script-tag-async-defer
 pisać do dokumentu?
 Nie, nie można robić document.write('kod html');
 
+11.Jakie są podstawowe interfejsy DOMu?
+Window - reprezentuje przeglądarke
+Document - reprezentuje całe drzewo DOM/załadowaną stronę
+EventTarget - reprezentuje każdy obiekt, który może odbierać zdarzenia oraz rejestrować
+            event handlery
+Node - reprezentuje węzeł w drzewie dom, daje metody firstChild, lastChild
+Element - reprezentuje każdy element, daje propertiesy jak id, className
+HTMLElement - reprezentuje każdy element htmla, daje propertiesy, tj. title
+EventTarget<-Node<-Document
+EventTarget<-Node<-Element<-HTMLElement
 
+12.Jaka jest różnica między obiektami w JS document vs Document?
+https://stackoverflow.com/questions/16790174/what-is-the-difference-between-document-and-document-in-javascript
 
 
 PYTANIA:
