@@ -381,17 +381,23 @@ https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
 
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
+trzeba googlać
 2.Jak przeglądarka pobiera specyfikacje HTML, CSS, DOM od W3C
 3.Jak wylistować atrybuty elemtu HTML
 4.Kiedy przeglądarki zaczną wspierać HMTL 5
-5.Jak działa domyślna walidacja w przeglądarkach/
+wygooglać
+5.Jak działa domyślna walidacja w przeglądarkach
 Walidacja po stronie przeglądarki input type=email lub url - domyślna walidacja przeglądarki
 6.Jak działa dodawanie styli przez przeglądarkę(styli przeglądarki)
 7.Jak przeglądarka blokuje wysłanie formularza gdy jego element jest invalid
 8.Jak przeglądarka rozróżnia stronę w HTML4 od HTML5?
+Nie rozróżnia, parsuje, wyświetla, buduje DOM
 9.Czy da radę wysłać formularz za pomocą innych metod HTTP, np. OPTION
 10.Co robi przeglądarka z nieznanymi atrybutami/tagami?
+lekceważy/pomija
 11.Do czego służy Modernizr?
-12.Do czego jest używany DOCTYPE - do mode quiks lub standard
+sprawdza z czego można skorzystać na danej przeglądarce
+12.Do czego jest używany DOCTYPE -
+do mode quiks lub standard
 13.Dlaczego aby zmienić wygląd wyskakujących elementów, np. error message dla inputu czy
 tooltipów musimy używać JavaScriptu?
