@@ -6,16 +6,17 @@
     <script>
         console.log("Parser start create DOM");
     </script>
-    <script src="external.js"></script>
+    <script src="external.js" defer></script>
     <script>
-        window.onload = function () {
-            changeptext("window.onload after DOM was created");
-        };
-        changeptext("while DOM is created and html is parsed");
-        function changeptext(newtext) {
-            var ptext = document.getElementById("ptext");
-            ptext.innerHTML = newtext;
-        }
+        /*
+         window.onload = function () {
+         changeptext("window.onload after DOM was created");
+         };
+         changeptext("while DOM is created and html is parsed");
+         function changeptext(newtext) {
+         var ptext = document.getElementById("ptext");
+         ptext.innerHTML = newtext;
+         }*/
     </script>
 </head>
 <body>

@@ -58,6 +58,53 @@ var ptext = document.getElementById("ptext");
 Dlatego, że parser zatrzymał się na skrypcie, nie doszedł jeszcze do tego elementu w htmlu
 i nie dodał do do drzewa DOM by móc po niego sięgać :)
 
+8.Jakie atrybuty wprowadza HTML5 aby usprawnić pobieranie skryptów i parsowanie html?
+HTML 5 wprowadza dwa atrybuty: async oraz defer. W obu przypadkach pobieranie skryptów
+nie wstrzymuje pracy parsera i DOM jest budowany dalej. Możemy je stosować jedynie
+podczas pobierania zewnętrzengo skryptu <script src="" async defer></script> - inaczej
+nie zadziałają.
+
+async- skrypty są pobierane równolegle, uruchamiane są asynchronicznie(asynchronously),
+       zaraz po pobraniu(czyli ten który szybciej się pobierze jest odpalany jako pierwszy).
+       Jeśli ustawimy async=false to skrypty wykonają się synchronicznie, sekwencyjnie, jeden po drugim.
+
+defer- skrypty są odalane w kolejności, w jakiej wymieniliśmy je w htmlu. Są odpalane po
+sparsowaniu całego dokumentu i utworzeniu pełnego DOMu ale jeszcze przed wywołaniem zdarzenia
+DOMContentLoaded.
+
+https://developers.google.com/speed/docs/insights/BlockingJS
+https://developer.mozilla.org/en/docs/Web/HTML/Element/script
+
+9.Kiedy są pobierane i wykonywane sktypty z atrybutami async i defer oraz bez tych atrybutów?
+
+<script src="http://jQuery-3.2.1.js"></script>
+parser dociera do sktyptu
+wstrzyma dalsze parsowanie html
+pobiera skrypt
+wykonuje skrypt
+wznawia parsowanie htmla
+
+<script src="http://jQuery-3.2.1.js" async></script>
+<script src="http://jPlny-3.2.1.js" async></script>
+parser dociera do skryptu
+pobiera skrypty i równolegle parsuje dalszą część html
+gdy skończy pobierać skrypty, uruchamia je, który szybciej został pobrany
+(nie czeka na zakończenie parsowania i zbudowanie DOMu by uruchomić skrypty)
+
+<script src="http://jQuery-3.2.1.js" defer></script>
+<script src="http://jPlny-3.2.1.js" defer></script>
+parser dociera do sktyptów
+pobiera skrypty i równolegle parsuje dalszą część html
+gdy skończy pobierać skrypty parsować stronę, uruchamia je w takiej
+kolejności w jakiej były wymienione w HTMLu
+(czeka na zakończenie parsowania i zbudowanie DOMu by uruchomić skrypty)
+
+http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+https://stackoverflow.com/questions/10808109/script-tag-async-defer
+
+10.Czy za pomocą skryptów pobieranych asynchronicznie (async lub defer) można
+pisać do dokumentu?
+Nie, nie można robić document.write('kod html');
 
 
 
