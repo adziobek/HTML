@@ -117,9 +117,25 @@ HTMLElement - reprezentuje każdy element htmla, daje propertiesy, tj. title
 EventTarget<-Node<-Document
 EventTarget<-Node<-Element<-HTMLElement
 
-12.Jaka jest różnica między obiektami w JS document vs Document?
+14.Jaka jest różnica między obiektami Window a window w JS?
+Window - jest funkcją, konstruktorem dla obiektu window. Nie możemy jednak użyć jej bezpośrednio by otworzyć nowe okno przeglądarki.
+        Trzeba w tym celu użyć metody Window.open.
+        Window.prototype przechowuje metody jakie posiada obiekt window.
+
+window - jest zmienną globalną zawierającą instację Window odpowiadającą karcie w przeglądarce.
+https://stackoverflow.com/questions/24008630/what-is-the-difference-between-window-and-window
+
+13.Jaka jest różnica między obiektami w JS document vs Document?
+Analogiczna jak Window i window
 https://stackoverflow.com/questions/16790174/what-is-the-difference-between-document-and-document-in-javascript
 
+14.Document.prototype vs document.__proto__?
+Oba pola pokazują na zbiór metod obiektu.
+https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript
+
+15.Co zwraca document.getElementById('id') ?
+Zwraca referencję na obiekt HTMLElement(obiekt DOMu)
+document.getElementById('ptext') instanceof HTMLParagraphElement //return true
 
 PYTANIA:
 1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
