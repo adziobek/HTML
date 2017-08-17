@@ -377,7 +377,12 @@ Dlatego że FormData ustawia Content-Type na multipart/form-data,
 tak jakbyśmy zawsze przesyłali dane binarne.
 https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
 
-
+64.Czy atrybuty HTML5 required i pattern działają nawet gdy kontrolki nie są w formularzu?
+Tak, nadal sprawdzają walidację i robią update na constraint violation api na
+element.validity
+Error message jest pokazywana dynamicznie dla atrybutu pattern. Kontrolki są poza formularzem
+więc nie ma akcji submit i nie zostanie pokazany error message dla błędu required.
+Trzeba to dynamicznie w JS sprawdzać i pokazywać.
 
 
 1.Jaka przeglądarka jaką wersję HTML wspiera
