@@ -122,7 +122,7 @@ Window - jest funkcją, konstruktorem dla obiektu window. Nie możemy jednak uż
         Trzeba w tym celu użyć metody Window.open.
         Window.prototype przechowuje metody jakie posiada obiekt window.
 
-window - jest zmienną globalną zawierającą instację Window odpowiadającą karcie w przeglądarce.
+window - object, jest zmienną globalną zawierającą instację Window odpowiadającą karcie w przeglądarce.
 https://stackoverflow.com/questions/24008630/what-is-the-difference-between-window-and-window
 
 13.Jaka jest różnica między obiektami w JS document vs Document?
@@ -137,6 +137,22 @@ https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript
 Zwraca referencję na obiekt HTMLElement(obiekt DOMu)
 document.getElementById('ptext') instanceof HTMLParagraphElement //return true
 
+16.Jakie parametry przyjmuje metoda EventTarget.addEventListener(a, b)?
+a - nazwa zdarzenia które ma zostać obsłużone, np. click, change
+b - funckja javascriptowa lub obiekt implementujący EventListener interface obsługujący zdarzenie/event
+
+17.Co reprezentuje interface DOM Event?
+Odpowiada każdemu zdarzeniu w DOM, zarówno generowanemu przez użytkownika(myszką, klawiaturą) jak i
+animacjami w javascripcie(zdarzenie zamknięcia reklamy).
+
+18.Czym się różni event bubbling od capturing?
+Event bubbling and capturing are two ways of propagating events which occur in an element that is
+nested within another element, when both elements have registered a handle for that event
+
+
+
 PYTANIA:
 1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
 Jak pobierają css oraz image(równolegle)?
+
+-zrobić edycję tabeli za pomocą DOMu

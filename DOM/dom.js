@@ -1,3 +1,4 @@
+console.log("Parser download dom .js and run it");
 //EventTarget
 var inputText = document.getElementById('textForSpan');
 var spanText = document.getElementById('spanToChange');
