@@ -47,5 +47,18 @@ Twój tekst:
     <input id="check" type="checkbox" value="defautl" onclick="handleCheckbox(event)"/>
     <label for="check">Test event.preventDefault && event.cancelable</label>
 </div>
+
+<!-- Event.currentTarget test and bubbling test-->
+
+<div id="div1" style="background-color: yellow; padding: 12px">
+    <b>div1</b>
+    <div id="div2" style="background-color: greenyellow; padding: 9px">
+        <b>div2</b>
+        <div id="div3" style="background-color: orangered; padding: 6px">
+            <b>div3</b>
+            <button>Generuj zdarzenie click</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
