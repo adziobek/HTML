@@ -38,7 +38,7 @@ function invokeCustomClickEvent(defaultClickEvent) {
     defaultClickEvent.stopPropagation();
 
     console.log("invokeCustomClickEvent()");
-    var customClickEvent = new Event("customClickEvent", {"bubbles": true, "cancelable": true}); //tworzymy i inicjalizujemy Event
+    var customClickEvent = new Event("customClickEvent", {"bubbles": true, "cancelable": true, "composed": false}); //tworzymy i inicjalizujemy Event
     var customButton = document.getElementById("customButton");
     customButton.dispatchEvent(customClickEvent); //wywołujemy Event na elemencie
 }

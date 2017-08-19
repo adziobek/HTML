@@ -235,6 +235,10 @@ na event.preventDefault() co powoduje że domyśle działania przeglądarki dla 
 nie zaznaczy się checkbox. Zdarzenie będzie jednak dalej propagowane w DOMie.
 
 composed: false
+A Boolean which is true if the event will cross from the shadow DOM into the standard DOM after
+reaching the shadow root (that is, the first node in the shadow DOM in which the event began to propagate).
+Of course, propagation only occurs at all if the bubbles property is also true.
+https://developer.mozilla.org/en-US/docs/Web/API/Event/Event
 
 26.Jak sprawdzić ile i jakie listenery ma dany element DOMu?
 Wywołując w konsoli getEventListeners(DOM object), np.
@@ -270,6 +274,9 @@ You can use Event.cancelable to check if the event is cancelable. Calling preven
 
 https://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault
 
+29.Co to shadow DOM?
+Ma na celu ukrycie implementacji komponentów wykorzystywanych na naszej stronie.
+https://www.sitepoint.com/the-basics-of-the-shadow-dom/
 
 PYTANIA:
 1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
