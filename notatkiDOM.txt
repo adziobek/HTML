@@ -144,11 +144,129 @@ b - funckja javascriptowa lub obiekt implementujący EventListener interface obs
 17.Co reprezentuje interface DOM Event?
 Odpowiada każdemu zdarzeniu w DOM, zarówno generowanemu przez użytkownika(myszką, klawiaturą) jak i
 animacjami w javascripcie(zdarzenie zamknięcia reklamy).
+https://developer.mozilla.org/en-US/docs/Web/API/Event/Event
 
-18.Czym się różni event bubbling od capturing?
+18.Jak mogą być generowane zdarzenia?
+Zdarzenia mogą być generowane przez kontrolki(button, select) lub customowo.
+
+19.Jaki wzorzec używa się do ręcznego wywoływania zdarzeń w DOM?
+utwórz-zainicjuj-wywołaj
+
+20.Jak customowo można utworzyć i wywołać Event?
+-za pomocą konstruktora Event(typeArg, eventInit) ,np.
+var evt = new Event("look", {"bubbles":true, "cancelable":false}); //tworzymy i inicjalizujemy Event
+document.addEventListener('look', function (e) {
+  // e.target matches elem
+}, false); //rejestrujemy handlera na event
+document.dispatchEvent(evt); //wywołujemy Event na elemencie
+
+-za pomocą metody document.createEvent(event)
+var event = document.createEvent('Event'); //tworzymy Event danej klasy(tu mogą być też klasy dziedziczące po Event)
+event.initEvent('build', true, true); // inicjalizujemy
+
+elem.addEventListener('build', function (e) {
+  // e.target matches elem
+}, false); //rejestrujemy handlera na event
+
+elem.dispatchEvent(event); // wywołujemy Event na elemencie
+
+21.Jak są obsługiwane zdarzenia?
+Zdarzenia są obsługiwane za pomocą metody w html, np. onclick="handleEvent()" lub
+za pomocą zarejestrowanego listenera element.addEventListener('customClickEvent', function() {
+}
+
+22.Za co odpowiada pierwszy parametr konstruktora Event(typeArg, eventInit)?
+Jest to nazwa Eventu. Domyślnie może to być: click albo możemy podać własną nazwę, np.
+customClick. Nazwa ta będzie przechowywana pod polem Event.type.
+Należy trzymać się tej nazwy rejestrując handlera, np.
+element.addEventListener('customClick', function() {});
+
+
+23.Porównaj zwykły event 'click' z customowym:
+Zwykły 'click' generowany default przez button ma o wiele więcej pól.
+
+'click' event:
+--------------
+bubbles:true
+cancelBubble:false
+cancelable:true
+composed:true
+currentTarget:null
+defaultPrevented:false
+detail:1
+isTrusted:true
+path:(8) [button, div, body, shadow, document-fragment, html, document, Window]
+relatedTarget:null
+returnValue:true
+srcElement:button
+target:button
+type:"click"
+
+'customClick' event:
+--------------------
+bubbles:true
+cancelBubble:false
+cancelable:false
+composed:false
+currentTarget:null
+defaultPrevented:false
+eventPhase:0
+isTrusted:false
+path:(8) [button#customButton, div, body, shadow, document-fragment, html, document, Window]
+returnValue:true
+srcElement:button#customButton
+target:button#customButton
+type:"customClickEvent"
+
+24.Czym się różni event bubbling od capturing?
 Event bubbling and capturing are two ways of propagating events which occur in an element that is
 nested within another element, when both elements have registered a handle for that event
 
+https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+https://www.quirksmode.org/js/events_order.html
+http://catcode.com/domcontent/events/capture.html
+
+25.Jakie są domyślne wartości dla opcji, którymi możemy zainicjować tworzony Event?
+bubbles: false(jeśli zmienimy na true, to zdarzenie zostanie obsłużone również w listenerach
+elementu wyżej w DOMie)
+cancelable: false
+composed: false
+
+26.Jak sprawdzić ile i jakie listenery ma dany element DOMu?
+Wywołując w konsoli getEventListeners(DOM object), np.
+
+getEventListeners(document.getElementById("customButton"))
+result:
+{click: Array(1), customClickEvent: Array(3)}
+click:Array(1)
+0:{useCapture: false, passive: false, once: false, type: "click", listener: ƒ}
+length:1
+
+customClickEvent:Array(3)
+0:{useCapture: false, passive: false, once: false, type: "customClickEvent", listener: ƒ}
+1:{useCapture: false, passive: false, once: false, type: "customClickEvent", listener: ƒ}
+2:{useCapture: false, passive: false, once: false, type: "customClickEvent", listener: ƒ}
+length:3
+
+27.Do czego służy metoda element.dispatchEvent(event)?
+Służy do wywołania zdarzenia w bierzącym elemencie.
+element.dispatchEvent(event)
+event - obiekt zdarzenia które ma zostać wywołane
+https://developer.mozilla.org/pl/docs/Web/API/Element/dispatchEvent
+
+28.Czym różnią się metody event.stopPropagation() i event.preventDefault()?
+event.stopPropagation() - gdy mamy button w divie i oba te elementy mają listenery na zdarzenie 'click'
+to powoduje, że wykona się listener z button i dalej zdarzenie nie będzie propagowane,
+będzie zakmnięte.
+
+
+event.preventDefault() - powoduje cancel the event, tzn. domyślna akcje przeglądarki dla tego eventu się nie wykona.
+Będzie on propagowany jednak dalej w DOMie.
+Calling preventDefault() during any stage of event flow cancels the event, meaning that any default action
+normally taken by the implementation as a result of the event will not occur.
+You can use Event.cancelable to check if the event is cancelable. Calling preventDefault() for a non-cancelable event has no effect.
+
+https://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault
 
 
 PYTANIA:

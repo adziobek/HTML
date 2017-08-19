@@ -19,6 +19,7 @@
          ptext.innerHTML = newtext;
          }*/
     </script>
+    <script src="events.js" defer></script>
 </head>
 <body>
 <script>
@@ -33,5 +34,16 @@
 <input type="text" id="textForSpan"/>
 Twój tekst:
 <span id="spanToChange"></span>
+
+<!-- Event propagation-->
+<!--Default event invoke-->
+<div onclick="handleYellowDivClick(event)" style="background-color: yellow; padding: 7px">
+    <button onclick="handleButtonClick(event)">Invoke button [click] event</button>
+</div>
+
+<!--Custom event invoke-->
+<div id="customDiv" onclick="handlePinkDivClick(event)" style="background-color: pink; padding: 7px">
+    <button id="customButton" onclick="invokeCustomClickEvent(event)">Invoke [customClickEvent] event</button>
+</div>
 </body>
 </html>
