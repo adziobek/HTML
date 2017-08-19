@@ -8,6 +8,5 @@ var spanText = document.getElementById('spanToChange');
  * */
 
 inputText.addEventListener("input", function () {
-    console.log(inputText.value);
     spanText.innerHTML = inputText.value;
 });
