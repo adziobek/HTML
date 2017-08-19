@@ -43,7 +43,9 @@ Twój tekst:
 
 <!--Custom event invoke-->
 <div id="customDiv" onclick="handlePinkDivClick(event)" style="background-color: pink; padding: 7px">
-    <button id="customButton" onclick="invokeCustomClickEvent(event)">Invoke [customClickEvent] event</button>
+    <button id="customButton" onclick="invokeCustomClickEvent(event)">Invoke [customClickEvent] event</button><br/>
+    <input id="check" type="checkbox" value="defautl" onclick="handleCheckbox(event)"/>
+    <label for="check">Test event.preventDefault && event.cancelable</label>
 </div>
 </body>
 </html>

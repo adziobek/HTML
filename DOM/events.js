@@ -34,11 +34,19 @@ function handlePinkDivClick(event) {
 function invokeCustomClickEvent(defaultClickEvent) {
     //Najpierw obsługujemy domyślne zdarzenia click na buttonie
     console.log("<>< <>< <><");
-    console.log("Event [" + defaultClickEvent.type + "] handling by custom button");
+    console.log("Event type=[" + defaultClickEvent.type + "] handling by custom button");
     defaultClickEvent.stopPropagation();
 
     console.log("invokeCustomClickEvent()");
     var customClickEvent = new Event("customClickEvent", {"bubbles": true, "cancelable": true}); //tworzymy i inicjalizujemy Event
     var customButton = document.getElementById("customButton");
     customButton.dispatchEvent(customClickEvent); //wywołujemy Event na elemencie
+}
+
+function handleCheckbox(event) {
+    event.cancelable = false;
+    console.log(event);
+    console.log("<>< <>< <><");
+    console.log("Event type=[" + event.type + "] handling by checkbox handler");
+    event.preventDefault();
 }

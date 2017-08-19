@@ -227,9 +227,13 @@ https://www.quirksmode.org/js/events_order.html
 http://catcode.com/domcontent/events/capture.html
 
 25.Jakie są domyślne wartości dla opcji, którymi możemy zainicjować tworzony Event?
-bubbles: false(jeśli zmienimy na true, to zdarzenie zostanie obsłużone również w listenerach
-elementu wyżej w DOMie)
-cancelable: false
+bubbles: false(dla wartości true zdarzenie będzie propagowane w górę DOMU i obsługiwane przez
+listenery ancestors elements)
+
+cancelable: false (dla wartości true można zamknąć zdarzenie. Zamknięcie zdarzenia polega na wywołaniu
+na event.preventDefault() co powoduje że domyśle działania przeglądarki dla tego zdarzenia się nie uruchomią, np.
+nie zaznaczy się checkbox. Zdarzenie będzie jednak dalej propagowane w DOMie.
+
 composed: false
 
 26.Jak sprawdzić ile i jakie listenery ma dany element DOMu?
@@ -256,9 +260,7 @@ https://developer.mozilla.org/pl/docs/Web/API/Element/dispatchEvent
 
 28.Czym różnią się metody event.stopPropagation() i event.preventDefault()?
 event.stopPropagation() - gdy mamy button w divie i oba te elementy mają listenery na zdarzenie 'click'
-to powoduje, że wykona się listener z button i dalej zdarzenie nie będzie propagowane,
-będzie zakmnięte.
-
+to powoduje, że wykona się listener z button i dalej zdarzenie nie będzie propagowane.
 
 event.preventDefault() - powoduje cancel the event, tzn. domyślna akcje przeglądarki dla tego eventu się nie wykona.
 Będzie on propagowany jednak dalej w DOMie.
