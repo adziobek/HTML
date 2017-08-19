@@ -318,11 +318,14 @@ lub customowa nazwa nadana przez nas.
 Tak, jest to event.timestamp
 
 38.Różnica między event.stopPropagation() a event.stopImmediatePropagation()?
-
 event.stopPropagation() allows other handlers on the same element to be executed,
 while event.stopImmediatePropagation() prevents every event from running.
 
 https://stackoverflow.com/questions/5299740/stoppropagation-vs-stopimmediatepropagation
+
+39.Jak można dodać listenera?
+element.addEventListener() - z DOM2
+element.onclick = function() {} - starszy sprawdzony sposób z DOM0
 
 PYTANIA:
 1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
