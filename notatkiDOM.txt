@@ -5,6 +5,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduct
 https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_browser_main_functionality
 http://taligarsiel.com/Projects/howbrowserswork1.htm#Parsing_general - świetnie opisane jak parser działa i jak DOM powstaje
 
+https://www.quirksmode.org/js/events_order.html - event propagation, buble, capturing
+
 Pytania:
 ---------
 1.Co to jest DOM?
@@ -277,6 +279,9 @@ https://stackoverflow.com/questions/5963669/whats-the-difference-between-event-s
 29.Co to shadow DOM?
 Ma na celu ukrycie implementacji komponentów wykorzystywanych na naszej stronie.
 https://www.sitepoint.com/the-basics-of-the-shadow-dom/
+
+30.Jak można wstrzymać propagacje eventu w DOM?
+Ustawiając Event.cancelBubble = true lub wywoływująć event.stopPropagation()
 
 PYTANIA:
 1.Jak przeglądarki pobierają pliki .js. Czy robią to jeden po drugim, czy równolegle?
