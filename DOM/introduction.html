@@ -20,6 +20,12 @@
          }*/
     </script>
     <script src="events.js" defer></script>
+    <style>
+        .sampleClass {
+            background-color: blanchedalmond;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
 <script>
@@ -61,9 +67,9 @@ Twój tekst:
     </div>
 </div>
 
-<p id="pnode">
-    <span id="1spannode">1 span</span>
-    <span id="2spannode">2 span</span>
+<p id="pnode" name="pnodeName" class="sampleClass">
+    Document test
+    <button onclick="changeBackgroundColor()">Change color</button>
 </p>
 </body>
 </html>

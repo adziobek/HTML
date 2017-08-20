@@ -66,3 +66,9 @@ function handleCheckbox(event) {
     console.log("Event type=[" + event.type + "] handling by checkbox handler");
     event.preventDefault();
 }
+
+function changeBackgroundColor() {
+    console.log("changeColeoe");
+    var pelement = document.querySelector(".sampleClass");
+    pelement.style.backgroundColor  = "green";
+}
