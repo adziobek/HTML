@@ -7,6 +7,7 @@ http://taligarsiel.com/Projects/howbrowserswork1.htm#Parsing_general - świetnie
 
 https://www.quirksmode.org/js/events_order.html - event propagation, buble, capturing
 https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture - event propagation phases
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM - whitespace node in DOM
 
 Pytania:
 ---------
