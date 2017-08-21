@@ -72,9 +72,14 @@ Twój tekst:
     <button onclick="changeBackgroundColor()">Change color</button>
 </p>
 
-<!-- once passive event listener test-->
+<!-- once event listener test-->
 <p id="pnode2" name="pnodeName" class="sampleClass">
-    <button id="onceButton">Listener invoke only once</button>
+    <button id="onceEventListenerButton">Listener invoke only once</button>
+</p>
+
+<!-- passive event listener test-->
+<p id="pnode3" name="pnodeName" class="sampleClass">
+    <input type="checkbox" id="passiveEventListenerButton">Listener can't preventDefault()</input>
 </p>
 
 </body>

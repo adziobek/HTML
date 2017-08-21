@@ -37,9 +37,23 @@ window.onload = function () {
         }
     });
 
-    document.getElementById("onceButton").addEventListener("click", function (event) {
+    document.getElementById("onceEventListenerButton").addEventListener("click", function (event) {
         console.log("Listener invoke only once on event");
     }, options);
+
+
+    var options = Object.defineProperties({}, {
+        'passive': {
+            value: true
+        }
+    });
+
+    document.getElementById("passiveEventListenerButton").addEventListener("click", function (event) {
+        console.log("Listener can't invoke preventDefault()");
+        event.preventDefault();
+    }, options);
+
+
 };
 
 //Obsługiwanie domyślenego zdarzenia 'click'
