@@ -30,6 +30,16 @@ window.onload = function () {
     div3.addEventListener("click", function (event) {
         console.log("div3 handler");
     });
+
+    var options = Object.defineProperties({}, {
+        'once': {
+            value: true
+        }
+    });
+
+    document.getElementById("onceButton").addEventListener("click", function (event) {
+        console.log("Listener invoke only once on event");
+    }, options);
 };
 
 //Obsługiwanie domyślenego zdarzenia 'click'
@@ -70,5 +80,5 @@ function handleCheckbox(event) {
 function changeBackgroundColor() {
     console.log("changeColeoe");
     var pelement = document.querySelector(".sampleClass");
-    pelement.style.backgroundColor  = "green";
+    pelement.style.backgroundColor = "green";
 }
